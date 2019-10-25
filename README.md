@@ -12,7 +12,7 @@ pip install git+https://github.com/Saliovin/gdeck.git
 ```
 ## How to use?
 ```
->>> from gdeck import GDeck 
+>>> import gdeck
 ```
 ## Classes
 
