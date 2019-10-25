@@ -1,6 +1,5 @@
 from gdeck import gdeck
 from random import choice
-from collections.abc import Iterable
 import pytest
 
 
