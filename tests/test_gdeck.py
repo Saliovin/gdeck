@@ -1,5 +1,7 @@
 from gdeck import gdeck
 from random import choice
+from collections.abc import Iterable
+import pytest
 
 
 def test_card_class():
@@ -24,6 +26,18 @@ def test_deck_class_size():
 
 def test_deck_choice():
     assert isinstance(choice(gdeck.Deck()), gdeck.Card)
+
+
+def test_deck_next():
+    assert isinstance(next(gdeck.Deck()), gdeck.Card)
+
+
+def test_deck_stop_iter():
+    with pytest.raises(StopIteration):
+        test = gdeck.Deck()
+        for i in iter(gdeck.Deck()):
+            next(test)
+        next(test)
 
 
 def test_deck_str():

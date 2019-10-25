@@ -12,6 +12,7 @@ class Deck:
     suits = ('Clubs', 'Spades', 'Hearts', 'Diamonds')
 
     def __init__(self):
+        self.count = 0
         self.cards = [Card(rank, suit) for rank in Deck.ranks for suit in Deck.suits]
 
     def __len__(self):
@@ -21,7 +22,6 @@ class Deck:
         return self.cards[index]
 
     def __iter__(self):
-        self.count = 0
         return self
 
     def __next__(self):
